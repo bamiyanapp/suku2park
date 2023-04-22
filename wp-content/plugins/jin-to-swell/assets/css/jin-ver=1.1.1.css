@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+.jic::before {
+	display: inline-block !important;
+}
+
+
+/* ボックス */
+[class*="simple-box"],
+[class*="concept-box"],
+.kaisetsu-box3 {
+	width: 100% !important;
+	padding: 1.5em;
+}
+
+.jin-iconbox {
+	width: 100% !important;
+	margin: 2em 0;
+}
+
+
+[class*="simple-box"] a,
+[class*="concept-box"] a,
+.kaisetsu-box3 a {
+	position: relative;
+	z-index: 2;
+}
+
+/* simple-box */
+
+/* [class*="simple-box"] {} */
+
+[class*="simple-box"] > *,
+[class*="concept-box"] > *,
+.kaisetsu-box3 > * {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+[class*="simple-box"] > * + *,
+[class*="concept-box"] > * + *,
+.kaisetsu-box3-title + * + * {
+	margin-top: 1em;
+}
+
+/* .kaisetsu-box */
+.kaisetsu-box3 {
+	position: relative;
+	margin: 3em 0;
+	padding-top: 4.5em !important;
+	padding-bottom: 2em;
+}
+
+.kaisetsu-box3-title {
+	background: none !important;
+}
+
+
+/* concept-box */
+[class*="concept-box"] {
+	position: relative;
+	margin: 3em 0;
+	padding-top: 2em;
+	border: 1px solid #eee;
+	border-radius: 4px;
+}
+
+[class*="concept-box"]::before {
+	position: absolute;
+	top: -0.5em;
+	left: 2.5em;
+	padding: 0 0.5em;
+	font-weight: bold;
+	font-size: 1.5em;
+	line-height: 1;
+	background: #fff;
+}
+
+[class*="concept-box"]::after {
+	position: absolute;
+	top: -1em;
+	left: 0.5em;
+	box-sizing: content-box;
+	width: 1em;
+	height: 1em;
+	padding: 0.4em;
+	color: #fff;
+	font-size: 1.5em;
+	font-family: "jin-icons";
+	line-height: 1;
+	text-align: center;
+	background: #bbb;
+	border: 4px solid #fff;
+	border-radius: 50%;
+
+	/* Better Font Rendering */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* ボタン */
+.twobutton {
+	display: block;
+	text-align: center;
+}
+
+[class*="color-button"] a,
+.jin-shortcode-button a {
+	text-decoration: none !important;
+}
+
+
+/* ランキング */
+
+/* ranking */
+img.ranking-number,
+img.ranking-number-girly,
+img.ranking-number-rich {
+	bottom: 8px !important;
+	width: 48px !important;
+	height: auto !important;
+	vertical-align: text-bottom;
+}
+
+.p-toc .ranking-number,
+.p-toc .ranking-number-girly,
+.p-toc .ranking-number-rich {
+	display: none !important;
+}
