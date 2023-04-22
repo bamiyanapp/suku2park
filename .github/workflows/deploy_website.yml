@@ -37,6 +37,10 @@ jobs:
         run: |
           npm install
           npm run build:posts          
+          pwd
+          pwd >> $GITHUB_OUTPUT
+          ls
+          ls >> $GITHUB_OUTPUT
       - uses: amondnet/vercel-action@v25
         with:
           # GitHub Actions の Secrets で作成した値を参照する形で
@@ -46,8 +50,3 @@ jobs:
           vercel-org-id: ${{ secrets.ORG_ID}}  #Required
           vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
           working-directory: ./
-      - run: |
-        pwd
-        pwd >> $GITHUB_OUTPUT
-        ls
-        ls >> $GITHUB_OUTPUT
